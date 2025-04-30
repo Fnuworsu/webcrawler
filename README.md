@@ -112,21 +112,11 @@ docker build --target builder -t crawler-builder .
 docker run --rm -w /app crawler-builder go test ./...
 ```
 
-#### One-line shortcut
-
-```bash
-docker build --target builder -q . | xargs docker run --rm -w /app -i go test ./...
-```
-
-Both commands ensure that tests run inside an environment with the exact Go version required by `go.mod`.
-
----
-
 ## Known limitations
 
 * The crawler does not respect `robots.txt`. Use caution when crawling external domains.
 * It retries neither network nor HTTP errors.
 * It only processes `text/html` content, ignoring other formats such as PDF or images.
 
-Contributions and pull requests are welcome.
+
 
