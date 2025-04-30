@@ -1,3 +1,4 @@
-./crawler
-./go.mod
-./go.sum
+crawler
+go.mod
+go.sum
+.env
