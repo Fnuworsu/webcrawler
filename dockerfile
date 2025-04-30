@@ -25,9 +25,7 @@ COPY . .
 # Build the crawler
 RUN go build -trimpath -ldflags="-s -w" -o crawler .
 
-########################
 # 2. Run stage
-########################
 FROM gcr.io/distroless/static:nonroot
 
 WORKDIR /home/nonroot
